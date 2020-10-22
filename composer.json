@@ -1,0 +1,28 @@
+{
+    "name": "nwidart/food",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Food\\": "",
+            "laravel/ui": "^3.0"
+        }
+    },
+    "require": {
+        "openfoodfacts/openfoodfacts-laravel": "^0.2.0",
+        "laravel/ui": "^3.0"
+    }
+}
