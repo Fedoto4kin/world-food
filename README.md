@@ -19,12 +19,14 @@ here as well)
 >updated in case it has been already saved before)
 >3. Cover your code with functional/unit tests
 >*Tech stack:*
->- PHP (last version)
->- Laravel (last version)
-
+>- PHP (last version) >= 7.4
+>- Laravel (last version) >= 8.0
+>- nwidart/laravel-modules >= 8.0
+>- npm
 
 <!-- GETTING STARTED -->
 ## Getting Started
+Hope you already have a PHP, Laravel with laravel-modules package and npm.
 
 ### Prerequisites
 
@@ -35,8 +37,47 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
+* Create dir Modules into Laravel project root(if not exists)
+* Copy module Food code into Modules(clone or unpack from an archive) 
+* Install Module dependencies: ```php artisan module:update Food```
+<br> Note: maybe you need to remove guzzle package before, because of conflict
+```composer remove guzzlehttp/guzzle```
+* Enable module:
+    * ```php artisan module:enable Food``` 
+    * Edit your composer.json
+```json
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
++           "Modules\\": "Modules/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+ ```
+   * Run ```composer update```
+*  Create Module's tables<br>
+   ```php artisan module:migrate Food```  
+* Compile front-end<br>
+``pm install && npm run dev``
+* Edit your main app Router and Module Router if needed.
 ### Tests (Optional)
 
-### Run 
+* Edit the phpunit.xml file and run Module tests
+```xml
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
++           <directory suffix="Test.php">./Modules/**/Tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
++           <directory suffix="Test.php">./Modules/**/Tests/Feature</directory>
+        </testsuite>
+    </testsuites>
+```
+
 
 ### Usage 
+
