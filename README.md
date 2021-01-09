@@ -19,10 +19,9 @@ here as well)
 >updated in case it has been already saved before)
 >3. Cover your code with functional/unit tests
 >*Tech stack:*
->- PHP (last version) >= 7.4
->- Laravel (last version) >= 8.0
->- nwidart/laravel-modules >= 8.0
->- npm
+>- PHP (last version)
+>- Laravel (last version)
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -34,6 +33,9 @@ This is an example of how to list things you need to use the software and how to
 * PHP >= 7.4
 * [Composer](https://getcomposer.org/)
 * Laravel >= 8.0 
+* nwidart/laravel-modules >= 8.0
+* npm
+
 
 ### Installation
 
