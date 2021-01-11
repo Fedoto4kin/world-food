@@ -18,6 +18,7 @@ here as well)
 >2. In front of each entry add a button/link, by click on which data will be saved to DB (or
 >updated in case it has been already saved before)
 >3. Cover your code with functional/unit tests
+>
 >*Tech stack:*
 >- PHP (last version)
 >- Laravel (last version)
@@ -63,7 +64,7 @@ This is an example of how to list things you need to use the software and how to
 *  Create Module's tables<br>
    ```php artisan module:migrate Food```  
 * Compile front-end<br>
-``pm install && npm run dev``
+``npm install && npm run dev``
 * Edit your main app Router and Module Router if needed.
 ### Tests (Optional)
 
@@ -80,5 +81,8 @@ This is an example of how to list things you need to use the software and how to
         </testsuite>
     </testsuites>
 ```
+* Then run<br>
+```php artisan test```
+
 
 
