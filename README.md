@@ -1,5 +1,6 @@
 # World's food
-Coding test. Laravel's module 
+
+### Coding test. Laravel's module 
 
 Code test according to the following:
 
@@ -39,7 +40,8 @@ This is an example of how to list things you need to use the software and how to
 
 * Create dir Modules into Laravel project root(if not exists)
 * Copy module Food code into Modules(clone or unpack from an archive) 
-* Install Module dependencies: ```php artisan module:update Food```
+* Install Module dependencies:<br>
+ ```php artisan module:update Food```
 <br> Note: maybe you need to remove guzzle package before, because of conflict
 ```composer remove guzzlehttp/guzzle```
 * Enable module:
@@ -77,7 +79,4 @@ This is an example of how to list things you need to use the software and how to
         </testsuite>
     </testsuites>
 ```
-
-
-### Usage 
 
