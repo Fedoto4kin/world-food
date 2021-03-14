@@ -60,7 +60,7 @@ This is an example of how to list things you need to use the software and how to
         }
     },
  ```
-   * Run ```composer update```
+   * Run ```composer install```
 *  Create Module's tables<br>
    ```php artisan module:migrate Food```  
 * Compile front-end<br>
